@@ -1942,6 +1942,19 @@
 								<td class="sheet-table-data-center-sm"><button type="roll" name="attr_appraisecheck" title='appraisecheck' value="@{appraisemacro}" ></button></td>
 							</tr>
 							<tr>
+								<td><input type="checkbox" name="attr_autohypnosisclassskill" title="autohypnosisclassskill" value="1" style="width: 8px;"></td>
+								<td class="sheet-table-header-left">Autohypnosis</td>
+								<td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_autohypnosis" title="autohypnosis" value="(@{wis-mod} +@{autohypnosisranks} +@{autohypnosismiscmod} )" disabled="true"></td>
+								<td class="sheet-table-data-center-sm">= Wis</td>
+								<td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_wismod" title="wismod" value="@{wis-mod} " disabled="true"></td>
+								<td class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_autohypnosisranks" title="autohypnosisranks" value="0"></td>
+								<td class="sheet-table-data-center-sm">+ &nbsp; -N/A- &nbsp; </td>
+								<td class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_autohypnosismiscmod" title="autohypnosismiscmod" value="0"></td>
+								<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 160px; height: 20px;" name="attr_autohypnosisnote" title="autohypnosisnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></td>
+								<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 160px; height: 20px;" name="attr_autohypnosisemacro" title="autohypnosisemacro">&{template:DnD35StdRoll} {{skillflag=true}} {{name=@{character_name} }} {{check=[Autohypnosis](http://www.dandwiki.com/wiki/SRD:Autohypnosis_Skill) check:}} {{checkroll=[[1d20 + [[@{autohypnosis}]] ]] }} {{notes=@{autohypnosisnote} }}</textarea></td>
+								<td class="sheet-table-data-center-sm"><button type="roll" name="attr_autohypnosischeck" title='appraisecheck' value="@{autohypnosisemacro}" ></button></td>
+							</tr>
+							<tr>
 								<td><input type="checkbox" name="attr_balanceclassskill" title="balanceclassskill" value="1" style="width: 8px;"></td>
 								<td class="sheet-table-header-left">Balance</td>
 								<td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_balance" title="balance" value="(@{dex-mod} +@{balanceranks} +@{balancemiscmod} +@{balancearmorcheckpen} )" disabled="true"></td>
@@ -2312,6 +2325,19 @@
 								<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 160px; height: 20px;" name="attr_knowreligionnote" title="knowreligionnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></td>
 								<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 160px; height: 20px;" name="attr_knowreligionmacro" title="knowreligionmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{character_name} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (Religion) check:}} {{checkroll=[[1d20 + [[@{knowreligion}]] ]] }} {{notes=@{knowreligionnote} }}</textarea></td>
 								<td class="sheet-table-data-center-sm"><button type="roll" name="attr_knowreligioncheck" title='knowreligioncheck' value="@{knowreligionmacro}" ></button></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="attr_knowpsionicsclassskill" title="knowpsionicsclassskill" value="1" style="width: 8px;"></td>
+								<td class="sheet-table-header-left"> Knowledge (Psionics) <b>*</b> &nbsp; </td>
+								<td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_knowpsionics" title="knowpsionics" value="(@{int-mod} +@{knowpsionicsranks} +@{knowpsionicsmiscmod} )" disabled="true"></td>
+								<td class="sheet-table-data-center-sm">= Int</td>
+								<td class="sheet-table-data-center-sm"><input type="text" class="sheet-table-data-center-skills" name="attr_intmod" title="intmod" value="@{int-mod} " disabled="true"></td>
+								<td class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" style="width: 28px;" name="attr_knowpsionicsranks" title="knowpsionicsranks" value="0"></td>
+								<td class="sheet-table-data-center-sm">+ &nbsp; -N/A- &nbsp; </td>
+								<td class="sheet-table-data-center-sm">+<input type="text" class="sheet-table-data-center-skills" name="attr_knowpsionicsmiscmod" title="knowpsionicsmiscmod" value="0"></td>
+								<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 160px; height: 20px;" name="attr_knowpsionicsnote" title="knowpsionicsnote (Notes for the note field on the default macro)" placeholder="Notes"></textarea></td>
+								<td class="sheet-table-data-center-sm"><textarea rows="1" cols="50" style="width: 160px; height: 20px;" name="attr_knowpsionicsmacro" title="knowpsionicsmacro">/w gm &{template:DnD35StdRoll} {{skillflag=true}} {{name=@{character_name} }} {{check=[Knowledge](http://www.dandwiki.com/wiki/SRD:Knowledge_Skill ) (psionics) check:}} {{checkroll=[[1d20 + [[@{knowpsionics}]] ]] }} {{notes=@{knowpsionicsnote} }}</textarea></td>
+								<td class="sheet-table-data-center-sm"><button type="roll" name="attr_knowpsionicscheck" title='knowpsionicscheck' value="@{knowpsionicsmacro}" ></button></td>
 							</tr>
 							<tr>
 								<td><input type="checkbox" name="attr_knowplanesclassskill" title="knowplanesclassskill" value="1" style="width: 8px;"></td>
